@@ -10,7 +10,25 @@
 <body>
   <div id="app">APPLICATION CONTENT</div>
 
+
   <script>__REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__</script>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1612768939046988',
+        xfbml      : true,
+        version    : 'v2.6'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
   <script type="text/javascript" src="./assets/app.js"></script>
 </body>
 </html>
