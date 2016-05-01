@@ -1,5 +1,6 @@
 'use strict';
 const path = require('path');
+const StringReplacePlugin = require('string-replace-webpack-plugin');
 const srcPath = path.join(__dirname, '/../src');
 const dfltPort = 8000;
 function getDefaultModules() {
@@ -13,6 +14,10 @@ function getDefaultModules() {
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader!postcss-loader'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       },
       {
         test: /\.sass/,
